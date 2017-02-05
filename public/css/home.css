@@ -1,8 +1,12 @@
+html, body {
+  height: 100%; }
+
 .container.hero {
-  max-width: 420px; }
+  max-width: 420px;
+  height: 90vh; }
 
 .hero {
-  margin-top: 20rem; }
+  padding-top: 15rem; }
   .hero .flex-container {
     display: flex;
     flex-direction: row;
@@ -10,26 +14,27 @@
     .hero .flex-container > div {
       font-family: 'League Spartan';
       font-size: 2rem; }
-    .hero .flex-container .info-icon {
-      font-size: 1.4rem;
-      border: 2px solid #000;
-      border-radius: 3rem;
-      height: 2.3rem;
-      width: 2.3rem;
-      margin-top: -0.5rem;
-      line-height: 2.6rem;
-      text-align: center; }
+    .hero .flex-container .info {
+      width: 2.6rem;
+      height: 2.5rem;
+      margin-right: -1rem;
+      margin-top: -0.1rem; }
+      .hero .flex-container .info:hover {
+        cursor: pointer;
+        opacity: 0.5; }
   .hero .title {
     font-family: 'DIN Condensed';
     font-size: 16rem;
     margin-left: -0.8rem;
-    margin-top: 1rem; }
+    margin-top: 1rem;
+    position: relative; }
     .hero .title::after {
       content: 'CRAFTED';
+      color: #564589;
       opacity: 0.1;
       position: absolute;
-      top: 5.3rem;
-      left: 0.5rem; }
+      top: 1.2rem;
+      left: 1.2rem; }
   .hero .line {
     height: 2px;
     background-color: black;
@@ -47,14 +52,16 @@
     .hero .set-list li a:hover {
       cursor: pointer;
       color: #f53a5d; }
-  .hero .flex-center {
-    display: flex;
-    justify-content: center; }
-    .hero .flex-center.arrow {
-      bottom: 10rem; }
-    .hero .flex-center a:hover {
-      margin-top: 0.5rem;
-      cursor: hover; }
+  .hero .arrow {
+    position: absolute;
+    bottom: 0;
+    width: 100%; }
+    .hero .arrow .flex-center {
+      display: flex;
+      justify-content: center; }
+      .hero .arrow .flex-center a:hover {
+        margin-bottom: -0.5rem;
+        cursor: hover; }
 
 .arrow-down {
   margin: 2rem;
