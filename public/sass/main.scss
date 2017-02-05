@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'DIN Condensed';
+    src: url('/../fonts/dincon-bold.otf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Andale Mono';
+    src: url('/../fonts/andaleMono/andale-mono.eot');
+    src: url('/../fonts/andaleMono/andale-mono.ttf') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PT Mono';
+    src: url('/../fonts/pt-mono.ttf');
+    font-style: normal;
+}
+
+
+html {
+	font-size: 10px;
+}
