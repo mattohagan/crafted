@@ -1,0 +1,30 @@
+{
+  "name": "crafted",
+  "version": "0.0.0",
+  "engines": {
+    "node": "4.1.1"
+  },
+  "description": "crafted.studio",
+  "main": "server.js",
+  "scripts": {
+    "css": "node-sass public/sass -o public/css",
+    "css:watch": "npm run css && node-sass public/sass -wo public/css",
+    "dev": "npm start & npm run css:watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mattohagan/crafted.git"
+  },
+  "keywords": [
+    "personal",
+    "ohagan"
+  ],
+  "author": "mattohagan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mattohagan/crafted/issues"
+  },
+  "homepage": "https://github.com/mattohagan/crafted",
+  "dependencies": {
+  }
+}
