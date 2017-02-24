@@ -2,45 +2,13 @@
 .project {
 	position: relative;
 
-	.column {
-		// border: 1px solid black;
-		// background: rgba(0,0,0,0.2);
-		height: 100%;
-		position: absolute;
-
-		&.left {
-			width: 50%;
-		}
-
-		&.center {
-			width: 10%;
-			margin-left: 45%;
-		}
-
-		&.right {
-			width: 50%;
-			margin-left: 50%;
-		}
-
-		.stick-right {
-			position: absolute;
-			right: 0;
-		}
-
-		.stick-right {
-			position: absolute;
-			left: 0;
-		}
-	}
-
 	.preview {
-
-		position: relative;
+		padding: 2rem;
 
 		.heading {
 			position: absolute;
-			right: -20rem;
-			top: -2.4rem;
+			left: 32%;
+			top: -1rem;
 
 			display: flex;
 			justify-content: space-between;
@@ -61,12 +29,35 @@
 			width: 100%;
 		}
 
+
+		&.left {
+			float: left;
+		}
+
+		&.right {
+			float: right;
+		}
+
+
+		&.add-top {
+			padding-top: 26rem;
+		}
+
 		&.landscape {
 			width: 50rem;
+
+			&.sm {
+				width: 35rem;
+			}
+
+			&.md {
+				width: 45rem;
+			}
 		}
 
 		&.portrait {
 			width: 30rem;
 		}
 	}
+
 }
