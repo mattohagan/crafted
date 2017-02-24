@@ -1,0 +1,72 @@
+
+.project {
+	position: relative;
+
+	.column {
+		// border: 1px solid black;
+		// background: rgba(0,0,0,0.2);
+		height: 100%;
+		position: absolute;
+
+		&.left {
+			width: 50%;
+		}
+
+		&.center {
+			width: 10%;
+			margin-left: 45%;
+		}
+
+		&.right {
+			width: 50%;
+			margin-left: 50%;
+		}
+
+		.stick-right {
+			position: absolute;
+			right: 0;
+		}
+
+		.stick-right {
+			position: absolute;
+			left: 0;
+		}
+	}
+
+	.preview {
+
+		position: relative;
+
+		.heading {
+			position: absolute;
+			right: -20rem;
+			top: -2.4rem;
+
+			display: flex;
+			justify-content: space-between;
+			align-items: baseline;
+			width: 40rem;
+
+			.title {
+				font-family: 'League Spartan';
+				font-size: 3.2rem;
+			}
+
+			.info {
+				font-size: 1.3rem;
+			}
+		}
+
+		img {
+			width: 100%;
+		}
+
+		&.landscape {
+			width: 50rem;
+		}
+
+		&.portrait {
+			width: 30rem;
+		}
+	}
+}

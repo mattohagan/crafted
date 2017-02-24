@@ -5,6 +5,10 @@ html, body {
   max-width: 420px;
   height: 90vh; }
 
+.container.content {
+  margin-top: 40rem;
+  margin-bottom: 40rem; }
+
 .hero {
   padding-top: 15rem; }
   .hero .flex-container {
@@ -62,11 +66,51 @@ html, body {
       .hero .arrow .flex-center a:hover {
         margin-bottom: -0.5rem;
         cursor: hover; }
+    .hero .arrow .arrow-down {
+      margin: 2rem;
+      width: 10px;
+      height: 10px;
+      border-left: 2px solid #000;
+      border-bottom: 2px solid #000;
+      transform: rotate(-45deg); }
 
-.arrow-down {
-  margin: 2rem;
-  width: 10px;
-  height: 10px;
-  border-left: 2px solid #000;
-  border-bottom: 2px solid #000;
-  transform: rotate(-45deg); }
+.project {
+  position: relative; }
+  .project .column {
+    height: 100%;
+    position: absolute; }
+    .project .column.left {
+      width: 50%; }
+    .project .column.center {
+      width: 10%;
+      margin-left: 45%; }
+    .project .column.right {
+      width: 50%;
+      margin-left: 50%; }
+    .project .column .stick-right {
+      position: absolute;
+      right: 0; }
+    .project .column .stick-right {
+      position: absolute;
+      left: 0; }
+  .project .preview {
+    position: relative; }
+    .project .preview .heading {
+      position: absolute;
+      right: -20rem;
+      top: -2.4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      width: 40rem; }
+      .project .preview .heading .title {
+        font-family: 'League Spartan';
+        font-size: 3.2rem; }
+      .project .preview .heading .info {
+        font-size: 1.3rem; }
+    .project .preview img {
+      width: 100%; }
+    .project .preview.landscape {
+      width: 50rem; }
+    .project .preview.portrait {
+      width: 30rem; }

@@ -23,13 +23,13 @@ html {
 	font-size: 10px;
 }
 
-@media (max-width: 500px) {
+@media all and (max-width: 500px) {
 	html {
 		font-size: 8.2px;
 	}
 }
 
-@media (max-width: 320px) {
+@media all and (max-width: 320px) {
 	html {
 		font-size: 6.7px;
 	}
