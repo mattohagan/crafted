@@ -2,6 +2,10 @@
 .project {
 	position: relative;
 
+	&-padding {
+		padding-top: 20rem;
+	}
+
 	.preview {
 		padding: 2rem;
 
@@ -22,11 +26,38 @@
 
 			.info {
 				font-size: 1.3rem;
+				font-family: 'PT Mono';
 			}
 		}
 
 		img {
 			width: 100%;
+			border-radius: 4px;
+			position: relative;
+			bottom: 0;
+			transition: all 200ms ease-out;
+			-webkit-transition: all 200ms ease-out;
+			-moz-transition: all 200ms ease-out;
+
+			&:hover {
+				box-shadow: 0px 5px 16px rgba(33,33,33,0.07);
+				cursor: pointer;
+			}
+
+			&.expand {
+				box-shadow: none;
+				position: fixed;
+				top: 15% !important;
+				left: 15% !important;	
+				width: 75% !important;
+				z-index: 10;
+			}
+
+			&.transitions {
+				transition: all 200ms ease-out !important;
+				-webkit-transition: all 200ms ease-out !important;
+				-moz-transition: all 200ms ease-out !important;
+			}
 		}
 
 
@@ -41,6 +72,10 @@
 
 		&.add-top {
 			padding-top: 26rem;
+		}
+
+		&.add-right {
+			padding-right: 5rem;
 		}
 
 		&.landscape {

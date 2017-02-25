@@ -6,7 +6,7 @@ html, body {
   height: 90vh; }
 
 .container.content {
-  margin-top: 40rem;
+  margin-top: 5rem;
   margin-bottom: 40rem; }
 
 .hero {
@@ -76,6 +76,8 @@ html, body {
 
 .project {
   position: relative; }
+  .project-padding {
+    padding-top: 20rem; }
   .project .preview {
     padding: 2rem; }
     .project .preview .heading {
@@ -90,15 +92,38 @@ html, body {
         font-family: 'League Spartan';
         font-size: 3.2rem; }
       .project .preview .heading .info {
-        font-size: 1.3rem; }
+        font-size: 1.3rem;
+        font-family: 'PT Mono'; }
     .project .preview img {
-      width: 100%; }
+      width: 100%;
+      border-radius: 4px;
+      position: relative;
+      bottom: 0;
+      transition: all 200ms ease-out;
+      -webkit-transition: all 200ms ease-out;
+      -moz-transition: all 200ms ease-out; }
+      .project .preview img:hover {
+        box-shadow: 0px 5px 16px rgba(33, 33, 33, 0.07);
+        cursor: pointer; }
+      .project .preview img.expand {
+        box-shadow: none;
+        position: fixed;
+        top: 15% !important;
+        left: 15% !important;
+        width: 75% !important;
+        z-index: 10; }
+      .project .preview img.transitions {
+        transition: all 200ms ease-out !important;
+        -webkit-transition: all 200ms ease-out !important;
+        -moz-transition: all 200ms ease-out !important; }
     .project .preview.left {
       float: left; }
     .project .preview.right {
       float: right; }
     .project .preview.add-top {
       padding-top: 26rem; }
+    .project .preview.add-right {
+      padding-right: 5rem; }
     .project .preview.landscape {
       width: 50rem; }
       .project .preview.landscape.sm {
