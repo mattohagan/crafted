@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+	// set anchor scrolling
 	$('.scroll').each(function(){
 		$(this).click(function(e){
 			e.preventDefault();
@@ -7,6 +7,13 @@ $(document).ready(function(){
 			scrollToAnchor(href);
 		});
 	});
+
+	resize('.slideshow img');
+	window.addEventListener('resize', throttle(function(ev) {
+		// callback
+		resize('.slideshow img');
+	}, 10));
+
 
 	$('.preview img').click(function(e){
 
@@ -64,5 +71,65 @@ function scrollToAnchor(id){
     let tag = $(id);
     $('html,body').animate({scrollTop: tag.offset().top},'slow');
 }
+
+
+
+function resize(tag){
+	let ratio = $(tag).attr('height') / $(tag).attr('width');
+
+	let currH = $(tag).height();
+	let currW = $(tag).width();
+
+	let container = '.slideshow';
+	let maxW = $(container).width();
+	let maxH = $(container).height();
+
+	// attempt to fit 
+	if(ratio <= 1) {
+		currW = maxW;
+		currH = currW * ratio;
+	} else if (ratio > 1) {
+		currH = maxH;
+		currW = currH / ratio;
+	}
+
+	// resize if too big
+	if(currH > maxH) {
+		currH = maxH;
+		currW = currH / ratio;
+	} else if (currW > maxW) {
+		currW = maxW;
+		currH = currW * ratio;
+	}
+
+	$(tag).css('width', currW + 'px');
+	$(tag).css('height', currH + 'px');
+}
+
+
+
+function throttle(fn, delay) {
+	var allowSample = true;
+
+	return function(e) {
+		if (allowSample) {
+			allowSample = false;
+			setTimeout(function() { allowSample = true; }, delay);
+			fn(e);
+		}
+	};
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 

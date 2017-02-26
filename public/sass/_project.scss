@@ -11,7 +11,7 @@
 
 		.heading {
 			position: absolute;
-			left: 32%;
+			left: 42%;
 			top: -1rem;
 
 			display: flex;
@@ -95,4 +95,19 @@
 		}
 	}
 
+}
+
+
+@media (max-width: 550px) {
+	.project {
+		.preview {
+			&.add-top {
+				padding-top: initial;
+			}
+
+			&.add-right {
+				padding-right: initial;
+			}
+		}
+	}
 }
